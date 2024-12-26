@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.min.css" />
-    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Rent Car</title>
   </head>
   <body>
     <header class="header">
@@ -16,13 +23,32 @@
         <nav class="sitenav">
           <ul class="sitenav__list">
             <li class="sitenav__item">
-              <a href="#" class="sitenav__link">Categories</a>
+              <a href="#" class="sitenav__link hidden-after">Categories</a>
             </li>
             <li class="sitenav__item">
               <a href="#" class="sitenav__link"> About Us </a>
+              <ul class="hidden-nav">
+                <li class="sitenav__item">
+                  <a href="#" class="sitenav__link hidden-after">News</a>
+                </li>
+                <li class="sitenav__item">
+                  <a href="#" class="sitenav__link hidden-after">Careers</a>
+                </li>
+                <li class="sitenav__item">
+                  <a href="#" class="sitenav__link hidden-after">Locations</a>
+                </li>
+              </ul>
             </li>
             <li class="sitenav__item">
               <a href="#" class="sitenav__link"> Help center</a>
+              <ul class="hidden-nav">
+                <li class="sitenav__item">
+                  <a href="#" class="sitenav__link hidden-after">FAQ</a>
+                </li>
+                <li class="sitenav__item">
+                  <a href="#" class="sitenav__link hidden-after">Contact us</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -31,11 +57,14 @@
           <a href="tel:998947700013" class="container__box__number"
             >+998 94 770 00 13</a
           >
-          <button>
+          <button id="theme-toggler" class="header__btn btn">
             <img
+              alt=""
+              width="15"
+              height="15"
               src="./src/images/moon.svg"
               alt=""
-              class="container__box__image"
+              id="container__box__image"
             />
           </button>
           <a href="#" class="container__box__reg"
@@ -46,7 +75,47 @@
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h2 class="hero__title">Compact cars</h2>
+            <p class="hero__subtitle">
+              Rent cars as you are comfortable and where you are comfortable.
+            </p>
+          </div>
+
+          <div class="hero__box">
+            <img src="./src/images/dotts.svg" alt="" class="hero__dotted" />
+            <input
+              class="hero__input"
+              type="search"
+              placeholder="Find the car of your dreams"
+            />
+            <div class="hero__box__rows">
+              <button class="hero__box__row">
+                <img
+                  width="5"
+                  height="8"
+                  src="./src/images/left-row.svg"
+                  alt="left-row"
+                />
+              </button>
+
+              <button class="hero__box__row">
+                <img
+                  width="5"
+                  height="8"
+                  src="./src/images/right-row.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>

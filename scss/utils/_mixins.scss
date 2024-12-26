@@ -10,6 +10,8 @@
     --hover-color: #{$dark-hover-color};
     --link-color: #{$dark-link-color};
     --footer-background: #{$dark-footer-background};
+    --slate-color: #{$dark-slate-color};
+    --line-color: #{$dark-line-color};
   } @else if $mode == "light" {
     --primary-color: #{$light-primary-color};
     --secondary-color: #{$light-secondary-color};
@@ -21,5 +23,7 @@
     --hover-color: #{$light-hover-color};
     --link-color: #{$light-link-color};
     --footer-background: #{$light-footer-background};
+    --slate-color: #{$light-slate-color};
+    --line-color: #{$light-line-color};
   }
 }

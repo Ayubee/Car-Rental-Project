@@ -1,37 +1,72 @@
 .header {
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
+  border-bottom: 1.5px solid var(--line-color);
 }
 .header__container {
   display: flex;
   align-items: center;
 }
 
-.header__container__logo {
-}
 .sitenav {
   margin-left: 2rem;
 }
 .sitenav__list {
   display: flex;
 }
-.sitenav__item {
-}
+
 .sitenav__link {
   font-weight: 500;
   font-style: 1.8rem;
   line-height: 1.2;
   color: var(--secondary-color);
   padding: 1.8rem 1.6rem;
+  display: flex;
+  gap: 8px;
+  border-radius: 100px;
+  position: relative;
+
+  &:hover {
+    background-color: var(--slate-color);
+  }
+}
+
+.sitenav__item:hover .hidden-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sitenav__item a:hover::after {
+  transform: rotateX(180deg);
+}
+
+.hidden-nav {
+  padding: 1rem;
+  margin-top: 1rem;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 10px 0px #00000026;
+  border-radius: 20px;
 }
 
 .sitenav__link::after {
-  display: inline-block;
-  content: "";
-  background-image: url("../src/images/row-icon.svg");
-  background-size: contain;
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f078";
+  margin-top: 0.7rem;
+  transition: 0.3s;
+  gap: 8px;
   width: 10px;
   height: 10px;
+}
+
+.hidden-after::after {
+  display: none;
 }
 
 .container__box {
@@ -43,16 +78,36 @@
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.2;
+  color: var(--secondary-color);
+  margin-right: 2.4rem;
 }
+
+.header__btn {
+  padding: 2.2rem;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--slate-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
 .container__box__image {
   width: 20px;
   height: 20px;
 }
 .container__box__reg {
+  font-weight: 500;
+  font-style: 1.8rem;
+  line-height: 1.2;
   border-radius: 100px;
   display: flex;
   align-items: center;
   padding: 18px 35px 18px 30px;
+  color: #ffffff;
+  background-color: var(--primary-color);
 
   img {
     margin-left: 8px;
