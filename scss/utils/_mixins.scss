@@ -11,7 +11,7 @@
     --link-color: #{$dark-link-color};
     --footer-background: #{$dark-footer-background};
     --slate-color: #{$dark-slate-color};
-    --line-color: #{$dark-line-color};
+    --card-color: #{$dark-card-color};
   } @else if $mode == "light" {
     --primary-color: #{$light-primary-color};
     --secondary-color: #{$light-secondary-color};
@@ -25,5 +25,6 @@
     --footer-background: #{$light-footer-background};
     --slate-color: #{$light-slate-color};
     --line-color: #{$light-line-color};
+    --card-color: #{$light-card-color};
   }
 }
